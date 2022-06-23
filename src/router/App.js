@@ -1,17 +1,21 @@
 
-import { Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // begin react imports here
-import HomePage from "../components/pages/HomePage";
 import Header from '../components/Header';
+import HomePage from "../components/pages/HomePage";
+import AboutPage from '../components/pages/AboutPage';
+
+
 
 function App() {
   return (
-    <Router basename='/' >
+    <BrowserRouter>
     <Header/>
         <Routes>
           <Route path={'/'} element={<HomePage/>}/>
+          <Route path={'/about'} element={<AboutPage/>}/>
         </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
