@@ -1,9 +1,9 @@
+// begin react imports here
+import HomePage from "../components/HomePage";
 
 function App() {
   return (
-    <div className="App">
-     hello there! this is a test!
-    </div>
+    <HomePage />
   );
 }
 
