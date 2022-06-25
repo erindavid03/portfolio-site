@@ -13,12 +13,13 @@ function Contact() {
     let randomGreetingIndex = (Math.floor(Math.random() * contactGreeting.length));
 
     console.log(randomGreetingIndex);
+    console.log(contactGreeting);
 
 
   return (
-    <div>
-        {/* <h2>{contactGreeting[randomGreetingIndex]}</h2> */}
-        <a href="mailto:erindavid001@email.com"></a>
+    <div id="contact">
+        <h2>{contactGreeting[randomGreetingIndex]}</h2>
+        <a href="mailto:erindavid001@email.com">{ randomGreetingIndex == 8 ? buttonText[1] : buttonText[0] }</a>
     </div>
   )
 }

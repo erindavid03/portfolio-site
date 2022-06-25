@@ -8,6 +8,7 @@ import DevPage from '../components/pages/DevPage';
 import ArtworkPage from '../components/pages/ArtworkPage';
 import NotFoundPage from '../components/pages/NotFoundPage';
 import Footer from '../components/Footer';
+import Contact from '../components/Contact';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path={'/development'} element={<DevPage/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
         </Routes>
+        <Contact/>
       </main>
       <Footer/>
     </BrowserRouter>
