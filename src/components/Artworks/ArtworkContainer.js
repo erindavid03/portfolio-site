@@ -5,7 +5,7 @@ import ArtworkCard from './ArtworkCard';
 
 function ArtworkContainer() {
     
-  const apiPath = 'https://erindee.ca/erin-portfolio/wp-json/wp/v2/portfolio-artworks';
+  const apiPath = 'https://erindee.ca/erin-portfolio/wp-json/wp/v2/portfolio-artworks?acf_format=standard';
   const [restData, setRestData] = useState([]);
   const [isLoaded, setLoad] = useState(false);
 
@@ -27,7 +27,6 @@ function ArtworkContainer() {
   return (
     <div>
     {isLoaded === true ?
-
       restData.map(artwork => <ArtworkCard key={artwork.id} artwork={artwork}/>) :
       <p>Loading...</p>
     }
