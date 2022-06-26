@@ -29,8 +29,8 @@ function WorkLinks() {
         onMouseOver={()=>setHoverCheckDev(true)}
         onMouseOut={()=>setHoverCheckDev(false)}>
             <article>
-                <img src={hoverCheckDev ? `${DevHover}` : `${DevIcon}`} alt="Cat holding a piece of artwork"/>
-                <h3>Artworks</h3>
+                <img src={hoverCheckDev ? `${DevHover}` : `${DevIcon}`} alt="Cat using computer"/>
+                <h3>Development</h3>
             </article>
         </Link>  
         
