@@ -6,14 +6,11 @@ function Contact() {
     "Got any questions? Send me a telegram!", "Like my stuff? Send a telegram!", "Wanna be friends? (❁´◡`❁) Send me a telegram!", "Wanna work together? Send a telegram :D I wont bite!", "Lets chat! Send me a telegram!",
     "Wanna make cool wizard magic together? Send me an owl (∩^o^)⊃━☆", "Got any questions? Send a telegram! its free!!"];
     // store button text here
-    const buttonText = ['Send a Telegram', 'Send and Owl'];
+    const buttonText = ['Send a Telegram', 'Send an Owl'];
 
 
     // randomize the contact greetings here!
     let randomGreetingIndex = (Math.floor(Math.random() * contactGreeting.length));
-
-    console.log(randomGreetingIndex);
-    console.log(contactGreeting);
 
 
   return (
