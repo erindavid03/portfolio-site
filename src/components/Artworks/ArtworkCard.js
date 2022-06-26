@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 function ArtworkCard({artwork}) {
   return (
@@ -10,7 +11,7 @@ function ArtworkCard({artwork}) {
 
         <div>
             <p>{artwork.acf.general_statement}</p>
-            <a href='#'>More Info</a>
+            <Link to='/artworks/:id'>More Info</Link>
         </div>
         
     </article>

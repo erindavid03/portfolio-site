@@ -9,6 +9,7 @@ import ArtworkPage from '../components/pages/ArtworkPage';
 import NotFoundPage from '../components/pages/NotFoundPage';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
+import SingleArtwork from '../components/pages/SingleArtworkPage';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path={'/artworks'} element={<ArtworkPage/>}/>
           <Route path={'/development'} element={<DevPage/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
+          <Route path='/artworks/:id' element={<SingleArtwork/>}/>
         </Routes>
         <Contact/>
       </main>

@@ -1,7 +1,6 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
-import {useTabList, useTab, useTabPanel} from '@react-aria/tabs'
 
 function SingleArtwork() {
 
