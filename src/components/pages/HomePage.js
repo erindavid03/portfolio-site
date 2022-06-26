@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
+import WorkLinks from '../WorkLinks';
 
 function HomePage() {
    
@@ -11,6 +12,7 @@ function HomePage() {
        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet accusantium omnis, nam velit officiis quasi sapiente asperiores exercitationem adipisci dolorem, similique nihil voluptates nemo reprehenderit, tenetur modi quam repellat neque!</p>
 
        <h2>Checkout my cool cool stuff {'<3'}</h2>
+       <WorkLinks />
     </div>
   )
 }
