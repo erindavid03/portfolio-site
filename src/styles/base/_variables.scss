@@ -1,0 +1,47 @@
+// variables scss
+// ---- Colors ----- //
+// backgrounds
+$main-color: #ffff;
+$secondary-color: #FFEFF2;
+// accents
+$border-colors: #FFC0CB;
+// typography
+$font-color-main: #0000;
+$font-color-nav: #E48B8B;
+$link-hover: #67b6b9;
+$link-color: $font-color-main;
+
+// ---- Fonts ----- // 
+// load in custom font here
+@font-face {
+	font-family: 'Basiic' ;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url(../fonts/basiic.woff); 
+}
+//headings
+$font-heading: 'Times New Roman', Times, serif;
+// body
+$font-body: 'Basiic', Arial, sans-serif;
+//links
+$font-links: 'Times New Roman', Times, serif;
+//sizes
+$body-font-size: 1rem;
+$heading-font-size: 2rem;
+$sub-heading-font-size: 1.5rem;
+//weight
+$headings-weight: 700;
+$links-wieght: $headings-weight;
+$body-weight: 400;
+
+// ---- media queries ---- //
+$tablet: 37.5em;
+// 768 px -- large tablets
+$large-tablet: 48em;
+// 1024px  -- laptops
+$desktop: 64em;
+// 1440px -- large screen
+$large-screen: 90em;
+
+
