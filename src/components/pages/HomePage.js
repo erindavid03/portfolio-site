@@ -6,14 +6,19 @@ function HomePage() {
    
 
   return (
-    <div>
-       <h1>Hello There!</h1>
+    <>
+      <section>
+        <h1>Hello There!</h1>
+        <p>Hey there! I’m Erin and I am a Front-End Web Developer!  I like collecting records, art, and playing cool games! This is my portfolio and it contains all the cool stuff I’ve worked on! Feel free to have a look around! 
+          Perhaps you'll find something super cool! {':)'}
+        </p>
+      </section>
 
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet accusantium omnis, nam velit officiis quasi sapiente asperiores exercitationem adipisci dolorem, similique nihil voluptates nemo reprehenderit, tenetur modi quam repellat neque!</p>
-
-       <h2>Checkout my cool cool stuff {'<3'}</h2>
-       <WorkLinks />
-    </div>
+      <section>
+        <h2>Checkout my cool cool stuff {'<3'}</h2>
+        <WorkLinks />
+      </section>
+    </>
   )
 }
 
