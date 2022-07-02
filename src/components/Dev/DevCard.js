@@ -12,7 +12,7 @@ function DevCard({project}) {
 
         <div>
             <p>{project.acf.general_statement}</p>
-            <Link to='/development/:id'>More Info</Link>
+            <Link to={`/development/${project.id}`}>More Info</Link>
         </div>
         
     </article>

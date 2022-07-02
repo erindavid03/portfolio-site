@@ -10,6 +10,7 @@ import NotFoundPage from '../components/pages/NotFoundPage';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import SingleArtwork from '../components/pages/SingleArtworkPage';
+import SingleDev from '../components/pages/SingleDevPage';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path={'/development'} element={<DevPage/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
           <Route path='/artworks/:id' element={<SingleArtwork/>}/>
+          <Route path='/development/:id' element={<SingleDev/>}/>
         </Routes>
         <Contact/>
       </main>
