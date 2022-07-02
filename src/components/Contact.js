@@ -14,10 +14,10 @@ function Contact() {
 
 
   return (
-    <div id="contact">
+    <section id="contact">
         <h2>{contactGreeting[randomGreetingIndex]}</h2>
         <a href="mailto:erindavid001@email.com">{ randomGreetingIndex == 8 ? buttonText[1] : buttonText[0] }</a>
-    </div>
+    </section>
   )
 }
 
