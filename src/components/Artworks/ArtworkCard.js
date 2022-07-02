@@ -13,7 +13,7 @@ function ArtworkCard({artwork}) {
 
         <div>
             <p>{artwork.acf.general_statement}</p>
-            <Link to='/artworks/:id'>More Info</Link>
+            <Link to={`/artworks/${artwork.id}`}>More Info</Link>
         </div>
         
     </article>
