@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+//GENERAL STYLES HERE
+
+body{
+    font-family: $font-body;
+    color: $font-color-main;
+
+    a{
+        font-family: $font-links;
+        text-decoration: none;
+        color: $font-color-main;
+        font-weight: $headings-weight;
+
+        &:hover{
+            color: $link-hover;
+        }
+    }
+
+    h1{
+        font-family: $font-heading;
+        font-size: $heading-font-size;
+    }
+    
+    ul{
+        list-style: none;
+    }
+}
