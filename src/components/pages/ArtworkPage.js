@@ -8,7 +8,7 @@ function ArtworkPage() {
 
   return (
 
-    <div>
+    <section>
       <div>
         <h1>Artworks</h1>
         <p>This is where I keep all my cool artwork! I enjoy both digital and traditional media as a means to produce neat projects.  I take inspiration from old anime, psychological horror, and Wes Anderson movies. 
@@ -18,7 +18,7 @@ function ArtworkPage() {
       </div>
   
       <ArtworkContainer />
-    </div>
+    </section>
   )
 }
 
