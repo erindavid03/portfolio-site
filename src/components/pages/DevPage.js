@@ -1,5 +1,6 @@
 import React from 'react';
 import DevBanner from '../images/dev-banner.png';
+import DevContain from '../Dev/DevContain';
 
 function DevPage() {
   return (
@@ -13,9 +14,8 @@ function DevPage() {
         <img src={`${DevBanner}`} alt="an Image of a cat coding" />
       </div>
 
-      <div>
-        
-      </div>
+    
+        <DevContain />
     </div>
   )
 }
