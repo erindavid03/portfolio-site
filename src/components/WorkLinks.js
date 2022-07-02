@@ -15,7 +15,7 @@ function WorkLinks() {
 
 
   return (
-    <div className='work-links'>
+    <nav className='work-links'>
         <Link to='/artworks'
         onMouseOver={()=>setHoverCheck(true)}
         onMouseOut={()=>setHoverCheck(false)}>
@@ -34,7 +34,7 @@ function WorkLinks() {
             </article>
         </Link>  
         
-    </div>
+    </nav>
   )
 }
 
