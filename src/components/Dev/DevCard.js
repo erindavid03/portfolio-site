@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function DevCard({project}) {
   return (
-      <article>
+      <article className='card slide'>
         <div>
             <img src={project.acf.finished_product}/> 
             <h2>{project.title.rendered}</h2>
