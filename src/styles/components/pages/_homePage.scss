@@ -1,0 +1,52 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+
+.intro-section{
+    @include flex-column;
+    align-items: center;
+
+    position: relative;
+
+    h1{
+        text-align: center;
+    }
+
+    img{
+        max-width: 78%;
+    }
+
+    &::after{
+        content: '♥♥♥';
+        letter-spacing: 1rem;
+        font-size: 1.5rem;
+        color: $border-colors;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $font-color-nav;
+        position: absolute;
+        bottom: -2rem;
+    }
+}
+
+.intro-section + section{
+    padding-top: 3rem;
+
+    h2{
+        font-size: 1.25rem;
+    }
+
+    article{
+        margin: 0 auto;
+        max-width: 288px;
+        @include flex-column;
+        align-items: center;
+
+        h3{
+            line-height: 1;
+                &::after {
+                    content: '→';
+                    font-weight: $headings-weight;
+                    margin-left: 1rem;
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@
 body{
     font-family: $font-body;
     color: $font-color-main;
+    line-height: 1.5;
 
     a{
         font-family: $font-links;
@@ -20,6 +21,14 @@ body{
     h1{
         font-family: $font-heading;
         font-size: $heading-font-size;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        font-family: $font-heading;
     }
     
     ul{
