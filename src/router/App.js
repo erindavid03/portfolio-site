@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import SingleArtwork from '../components/pages/SingleArtworkPage';
 import SingleDev from '../components/pages/SingleDevPage';
+import MobileNav from '../components/MobileNav';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Contact/>
       </main>
       <Footer/>
+      <MobileNav/>
     </BrowserRouter>
   );
 }
