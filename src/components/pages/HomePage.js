@@ -1,5 +1,6 @@
 import React from 'react'
 import WorkLinks from '../WorkLinks';
+import CatSit from '../images/cat-sit.png';
 
 function HomePage() {
    
@@ -7,10 +8,15 @@ function HomePage() {
   return (
     <>
       <section>
-        <h1>Hi there!</h1>
-        <p>I am a Front-End Web Developer! I like collecting records, art, and playing cool games! This is my portfolio and it contains all the cool stuff I’ve worked on! Feel free to have a look around! 
-          Perhaps you'll find something super cool! {':)'}
-        </p>
+
+        <div>
+          <h1>Hi there!</h1>
+          <p>I am a Front-End Web Developer! I like collecting records, art, and playing cool games! This is my portfolio and it contains all the cool stuff I’ve worked on! Feel free to have a look around! 
+            Perhaps you'll find something super cool! {':)'}
+          </p>
+        </div>
+
+        <img src={`${CatSit}`} alt="sitting cat" />
       </section>
 
       <section>
