@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 function Header() {
   return (
     <header>
+      <div className="header-wrap">
         <p>place logo</p>
 
         <nav>
@@ -15,6 +16,7 @@ function Header() {
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+      </div>
     </header>
   )
 }
