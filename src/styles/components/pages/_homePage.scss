@@ -4,15 +4,30 @@
 .intro-section{
     @include flex-column;
     align-items: center;
+    @media(min-width: $tablet){
+        @include flex-row;
+        flex-direction: row-reverse;
+    }
+    @media(min-width:$desktop){
+        margin: 0 auto;
+        max-width: 822px;
+    }
 
     position: relative;
 
     h1{
         text-align: center;
+        @media(min-width: $tablet){
+            text-align: left;
+        }
     }
 
     img{
         max-width: 78%;
+        @media(min-width: $tablet){
+            width: 300px;
+            padding-right: 2rem;
+        }
     }
 
     &::after{
@@ -25,7 +40,14 @@
         position: absolute;
         bottom: -3rem;
         text-align: center;
+        @media(min-width: $tablet){
+            left: 0;
+            right: 0;
+
+        }
     }
+
+    
 }
 
 .intro-section + section{
