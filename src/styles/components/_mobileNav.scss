@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .mobile-nav{
     border-top: solid 2px $border-colors;
@@ -12,7 +13,7 @@
     ul{
         padding: .5rem 1rem;
         margin: 0 auto;
-        display: flex;
+        @include flex-row;
         justify-content: space-between;
         text-align: center;
         line-height: 0;
