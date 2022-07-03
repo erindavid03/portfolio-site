@@ -2,12 +2,16 @@
 @use '../../base/mixins' as *;
 
 .development{
-    @media(min-width: $tablet){
+    @media(min-width: $large-tablet){
         @include flex-row;
         justify-content: space-around;
         align-items: center;
         max-width: 898.4px;
         margin: 0 auto;
+    }
+
+    @media(min-width:$desktop){
+        max-width: 100%;
     }
     
     div:nth-child(1){
@@ -30,7 +34,8 @@
         @include flex-column;
         align-items: center;
 
-        h2{
+        a{
+            font-size: $sub-heading-font-size;
             text-align: center;
         }
 
@@ -42,15 +47,13 @@
             @include flex-column;
             align-items: center;
 
-            a{
-                font-size: $sub-heading-font-size;
-                text-align: center;
-            }
+            
 
             div:nth-child(3){
                 display: none;
             }
         }
+
 
     }
 
