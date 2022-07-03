@@ -1,0 +1,9 @@
+@use '../base/variables' as *;
+
+header{
+    display: none;
+
+    @media(min-width: $tablet){
+        display: block;
+    }
+}
