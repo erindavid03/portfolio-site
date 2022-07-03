@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function SingleDevPage() {
   return (
     <>
+     <Link to='/development'>Back to Development</Link>
         <section>
           <h1>Single Dev Sample</h1>  
           <div>
