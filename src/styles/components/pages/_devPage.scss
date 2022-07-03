@@ -7,11 +7,42 @@
         @include flex-column;
         align-items: center;
     }
-}
-.card{
-    background-color: blue;
-}
 
-.card.slide{
-    background-color: pink;
+    .card{
+        @include flex-column;
+        align-items: center;
+
+        h2{
+            text-align: center;
+        }
+
+        &.slide{
+            @include flex-column;
+            align-items: center;
+
+            img{
+                width: 100%;
+            }
+
+            a{
+                font-size: $sub-heading-font-size;
+                text-align: center;
+            }
+
+            div:nth-child(3){
+                display: none;
+            }
+        }
+
+    }
+
+    // .card.slide div:nth-child(2){
+    //     display: none;
+    // }
+    
+    // .card div:nth-child(2){
+    //     display: block;
+    
+    // }
+
 }

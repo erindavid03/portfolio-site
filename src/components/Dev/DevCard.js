@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 function DevCard({project}) {
   const [isWide, setIsWide] = useState(
-    window.matchMedia("(min-width: 37.5em)").matches
+    window.matchMedia("(min-width: 64em)").matches
     );
 
     useEffect(() => {
@@ -17,8 +17,9 @@ function DevCard({project}) {
       <article className={isWide ? 'card' : 'card slide'}>
         <div>
             <img src={project.acf.finished_product}/> 
-            <h2>{project.title.rendered}</h2>
+            {isWide && <h2>{project.title.rendered}</h2>}
         </div>
+        {!isWide && <Link to={`/development/${project.id}`}>{project.title.rendered}</Link>}
 
         <div>
             <p>{project.acf.general_statement}</p>
