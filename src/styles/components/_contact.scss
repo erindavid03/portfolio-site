@@ -1,0 +1,26 @@
+// contact partial 
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+#contact{
+    @include flex-column;
+    align-items: center;
+
+    h2{
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    a{
+        font-family: $font-body;
+        padding: 1rem .5rem;
+        background-color: #faf767;
+        border-radius: 8px;
+        border: solid 2px $font-color-main;
+        color: $font-color-main;
+        box-shadow: 3px 3px $font-color-main;
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 260;
+    }
+}
