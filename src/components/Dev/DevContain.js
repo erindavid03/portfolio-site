@@ -18,7 +18,7 @@ function DevContain() {
         } else{
             setLoad(false);
         }
-        }
+      }
         fetchData();
     }, [apiPath]) 
 
