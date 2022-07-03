@@ -1,14 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 function DevCard({project}) {
+  const [isWide, setIsWide] = useState(
+    window.matchMedia("(min-width: 64em)").matches
+    );
+
+    useEffect(() => {
+      window
+      .matchMedia("(min-width: 37.5em)")
+      .addEventListener('change', e => setIsWide( e.matches ));
+    }, []);
+
   return (
-    <div>
-      <article>
+      <article className={isWide ? 'card' : 'card slide'}>
         <div>
             <img src={project.acf.finished_product}/> 
-            <h2>{project.title.rendered}</h2>
+            {isWide && <h2>{project.title.rendered}</h2>}
         </div>
+        {!isWide && <Link to={`/development/${project.id}`}>{project.title.rendered}</Link>}
 
         <div>
             <p>{project.acf.general_statement}</p>
@@ -16,7 +27,6 @@ function DevCard({project}) {
         </div>
         
     </article>
-    </div>
   )
 }
 
