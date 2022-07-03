@@ -2,11 +2,29 @@
 @use '../../base/mixins' as *;
 
 .development{
+    @media(min-width: $tablet){
+        @include flex-row;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 898.4px;
+        margin: 0 auto;
+    }
     
-    div:nth-child(2){
+    div:nth-child(1){
         @include flex-column;
         align-items: center;
+
+        @media(min-width:$tablet){
+            max-width: 523.2px;
+            margin: 0 auto;
+
+            img{
+                max-width: 288px;
+            }
+        }
     }
+
+    
 
     .card{
         @include flex-column;
@@ -16,13 +34,13 @@
             text-align: center;
         }
 
+        img{
+            width: 100%;
+        }
+
         &.slide{
             @include flex-column;
             align-items: center;
-
-            img{
-                width: 100%;
-            }
 
             a{
                 font-size: $sub-heading-font-size;
@@ -35,14 +53,5 @@
         }
 
     }
-
-    // .card.slide div:nth-child(2){
-    //     display: none;
-    // }
-    
-    // .card div:nth-child(2){
-    //     display: block;
-    
-    // }
 
 }

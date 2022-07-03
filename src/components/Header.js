@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <div className="header-wrap">
-        <p>place logo</p>
+        <p>place</p>
 
         <nav>
             <ul>
