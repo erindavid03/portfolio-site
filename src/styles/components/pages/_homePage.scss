@@ -52,24 +52,33 @@
 
 .intro-section + section{
     padding-top: 3rem;
+    
 
     h2{
         font-size: 1.25rem;
         text-align: center;
     }
 
-    article{
-        margin: 0 auto;
-        max-width: 288px;
-        @include flex-column;
-        align-items: center;
+    nav{
+        @media(min-width: $tablet){
+            @include flex-row;
+            justify-content: space-evenly;
+            max-width: 992px;
+            margin: 0 auto;
+        }
+        article{
+            margin: 0 auto;
+            max-width: 288px;
+            @include flex-column;
+            align-items: center;
 
-        h3{
-            line-height: 1;
-                &::after {
-                    content: '→';
-                    font-weight: $headings-weight;
-                    margin-left: 1rem;
+            h3{
+                line-height: 1;
+                    &::after {
+                        content: '→';
+                        font-weight: $headings-weight;
+                        margin-left: 1rem;
+                }
             }
         }
     }
