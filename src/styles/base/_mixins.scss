@@ -1,0 +1,14 @@
+//all mixins here
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin grid{
+    display: grid;
+}
