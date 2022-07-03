@@ -1,9 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 function DevCard({project}) {
+  const [isWide, setIsWide] = useState(
+    window.matchMedia("(min-width: 37.5em)").matches
+    );
+
+    useEffect(() => {
+      window
+      .matchMedia("(min-width: 37.5em)")
+      .addEventListener('change', e => setIsWide( e.matches ));
+    }, []);
+
   return (
-      <article className='card slide'>
+      <article className={isWide ? 'card' : 'card slide'}>
         <div>
             <img src={project.acf.finished_product}/> 
             <h2>{project.title.rendered}</h2>
