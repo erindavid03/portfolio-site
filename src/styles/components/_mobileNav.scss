@@ -1,0 +1,34 @@
+@use '../base/variables' as *;
+
+.mobile-nav{
+    border-top: solid 2px $border-colors;
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $main-color;
+
+    ul{
+        padding: .5rem 1rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        line-height: 0;
+        max-width: 26.5rem;
+    }
+
+    a{
+        font-family: $font-body;
+        font-size: .75rem;
+
+        img{
+            width: 3rem;
+        }
+    }
+
+    @media(min-width: $tablet){
+        display: none;
+    }
+}

@@ -20,13 +20,13 @@ function MobileNav() {
                 <li>
                     <NavLink to="/development">
                         <img src={`${CodeIcon}`} alt= 'link to development page'/>
-                        <p>Develompment</p>
+                        <p>Dev</p>
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to='/artworks'>
                          <img src={`${ArtIcon}`} alt= 'link to artworks page'/>
-                        <p>Artworks</p>
+                        <p>Art</p>
                     </NavLink>
                 </li>
                 <li>

@@ -1,3 +1,6 @@
 // base styles
 @use './base/normalize';
 @use './base/general';
+
+// nav styles here
+@use './components/mobileNav';
