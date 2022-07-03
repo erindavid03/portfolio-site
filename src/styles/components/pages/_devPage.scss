@@ -3,7 +3,7 @@
 
 .development{
     
-    div:nth-child(1){
+    div:nth-child(2){
         @include flex-column;
         align-items: center;
     }

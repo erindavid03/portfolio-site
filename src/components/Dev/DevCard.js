@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 function DevCard({project}) {
   return (
-    <div>
       <article>
         <div>
             <img src={project.acf.finished_product}/> 
@@ -16,7 +15,6 @@ function DevCard({project}) {
         </div>
         
     </article>
-    </div>
   )
 }
 
