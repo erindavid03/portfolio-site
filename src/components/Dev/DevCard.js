@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function DevCard({project}) {
+ // Shortens description to maintain card info positioning
+ const shortDesc = project.acf.general_statement.substring(0, 100) + ' ...';
+
   const [isWide, setIsWide] = useState(
     window.matchMedia("(min-width: 64em)").matches
     );
@@ -18,13 +21,13 @@ function DevCard({project}) {
         <div>
             <img src={project.acf.finished_product}/> 
         </div>
-        <Link to={`/development/${project.id}`}>{project.title.rendered}</Link>
+        {!isWide && <Link to={`/development/${project.id}`}>{project.title.rendered}</Link>}
 
         <div className='work-blurb'>
-            <p>{project.acf.general_statement}</p>
+            <p>{project.title.rendered} || {project.acf.kind}</p>
+            <p>{project.acf.general_statement.length > 20 && shortDesc}</p>
             <Link to={`/development/${project.id}`}>More Info</Link>
         </div>
-        
     </article>
   )
 }
