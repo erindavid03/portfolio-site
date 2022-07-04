@@ -26,7 +26,7 @@ function SingleArtwork() {
     fetchData();
   }, [apiPath]);
 
-  console.log(restData);
+
   return (
     <>
     { isLoaded ? 
@@ -39,49 +39,41 @@ function SingleArtwork() {
         <div>
           <h2>General info</h2>
           <p>{restData.acf.general_statement}</p>
-          <p className='media-and-size'>Traditional || 8.5 x 11</p>
+          <p className='media-and-size'> {restData.acf.kind} || {restData.acf.dimensions}</p>
         </div>
       </div>
       
       <div>
         <h2>Tools Used</h2>
         <ul>
-          <li>Pencil</li>
-          <li>Eraser</li>
-          <li>Crayons</li>
+        { //this outputs the tools used acf repeater field. make sure you give it a key (index) and use the array thing as supposed to acf.tools
+        restData.acf['tools'].map( (tool, index) => <li key={index}>{tool.tools_used}</li>)}
         </ul>
       </div>
 
      </section>
 
     <section>
-      <Tabs class='content-tabs' aria-label='tabs'>
+      <Tabs className='content-tabs' aria-label='tabs'>
         <TabList>
-          <Tab>About This Piece</Tab>
+          <Tab>About</Tab>
           <Tab>Reflection</Tab>
-          <Tab>In Progress Pictures</Tab>
+          {restData.acf.wip_pictures && <Tab>In Progress Pictures</Tab>}
         </TabList>
 
         <TabPanel>
-          <h2>About 'TITLE'</h2>
-          <p>This is stuff about the piece. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi explicabo fuga ex. Repudiandae, itaque quae cum suscipit atque perspiciatis. Fugit iure aut molestias aliquam odio dolorum quidem ducimus ab?</p>
+          <h2>About {restData.title.rendered}</h2>
+          <p>{restData.acf.about_this_piece}</p>
         </TabPanel>
         <TabPanel>
           <h2>Reflection</h2>
-          <p>This is a reflection. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officia ut, ullam cupiditate eos velit? Illo est aspernatur facilis qui consectetur necessitatibus inventore cum eaque, alias atque optio cupiditate animi?</p>
+          <p>{restData.acf.reflection}</p>
         </TabPanel>
         <TabPanel>
           <h2>In Progress</h2>
           <p>Here are pictures during the progress</p>
           <div>
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
+
           </div>
 
         </TabPanel>
