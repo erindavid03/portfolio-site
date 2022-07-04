@@ -9,7 +9,7 @@ function DevCard({project}) {
 
     useEffect(() => {
       window
-      .matchMedia("(min-width: 37.5em)")
+      .matchMedia("(min-width: 64em)")
       .addEventListener('change', e => setIsWide( e.matches ));
     }, []);
 
