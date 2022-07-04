@@ -39,7 +39,6 @@
     .card{
         @include flex-column;
         align-items: center;
-        max-width: 345px;
         margin: 0 auto;
 
         a{
@@ -50,6 +49,12 @@
 
         div:nth-child(1){
             position: relative;
+        }
+
+        img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover
         }
 
         .work-blurb{
