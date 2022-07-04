@@ -2,6 +2,8 @@
 @use '../../base/mixins' as *;
 
 .development{
+    @include flex-column;
+    justify-items: center;
     @media(min-width: $large-tablet){
         @include flex-row;
         justify-content: space-around;
@@ -14,7 +16,7 @@
         max-width: 100%;
     }
     
-    div:nth-child(1){
+    .page-intro{
         @include flex-column;
         align-items: center;
 
@@ -33,21 +35,22 @@
     .card{
         @include flex-column;
         align-items: center;
+        max-width: 345px;
+        margin: 0 auto;
 
         a{
             font-size: $sub-heading-font-size;
             text-align: center;
         }
 
-        img{
-            width: 100%;
+        div:nth-child(1){
+            position: relative;
         }
 
+        //this block is for hiding the project blurb at a certain media query
         &.slide{
             @include flex-column;
             align-items: center;
-
-            
 
             div:nth-child(3){
                 display: none;

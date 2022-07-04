@@ -20,7 +20,7 @@ function DevCard({project}) {
         </div>
         <Link to={`/development/${project.id}`}>{project.title.rendered}</Link>
 
-        <div>
+        <div className='work-blurb'>
             <p>{project.acf.general_statement}</p>
             <Link to={`/development/${project.id}`}>More Info</Link>
         </div>
