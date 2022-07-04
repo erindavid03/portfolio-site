@@ -9,7 +9,7 @@ function SingleArtwork() {
 
   const {id} = useParams();
   const apiPath = `https://erindee.ca/erin-portfolio/wp-json/wp/v2/portfolio-artworks/${id}?acf_format=standard`;
-  const [restData, setRestData] = useState({});
+  const [restData, setRestData] = useState([]);
   const [isLoaded, setLoad] = useState(false);
 
   useEffect( () => {
@@ -26,16 +26,19 @@ function SingleArtwork() {
     fetchData();
   }, [apiPath]);
 
+  console.log(restData);
   return (
+    <>
+    { isLoaded ? 
     <>
     <Link to='/artwork'>Back to Artwork</Link>
     <section>
-      <h1>Single Art Piece Title</h1>
+      <h1>{restData.title.rendered}</h1>
       <div>
-        <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
+        <img src={`${restData.acf.artwork_image}`} />
         <div>
           <h2>General info</h2>
-          <p>this is a little bit about my art. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur blanditiis necessitatibus eius, rerum eaque ab repudiandae non magni voluptatem, ex tenetur natus perspiciatis veniam quis aut magnam? Neque, aliquid obcaecati?</p>
+          <p>{restData.acf.general_statement}</p>
           <p className='media-and-size'>Traditional || 8.5 x 11</p>
         </div>
       </div>
@@ -83,7 +86,10 @@ function SingleArtwork() {
 
         </TabPanel>
       </Tabs>
-    </section>
+    </section> 
+    </>: 
+  
+    <p>loading... </p>}
     </>
   )
 }
