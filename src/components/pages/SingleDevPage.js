@@ -1,20 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
+import {useEffect, useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function SingleDevPage() {
+
+  const {id} = useParams();
+  const apiPath = `https://erindee.ca/erin-portfolio/wp-json/wp/v2/portfolio-projects/${id}?acf_format=standard`;
+  const [restData, setRestData] = useState([]);
+  const [isLoaded, setLoad] = useState(false);
+
+  useEffect( () => {
+    const fetchData = async () => {
+      const response = await fetch (apiPath);
+      if(response.ok){
+        const data = await response.json();
+        setRestData(data);
+        setLoad(true);
+      } else{
+        setLoad(false);
+      }
+    };
+    fetchData();
+  }, [apiPath]);
+
+  if(isLoaded){
+    console.log(restData);
+  }
+
   return (
     <>
+   { isLoaded ? 
+   <>
      <Link to='/development'>Back to Development</Link>
         <section>
-          <h1>Single Dev Sample</h1>  
+          <h1>{restData.title.rendered}</h1>  
           <div>
-            <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
+            <img src={`${restData.acf.finished_product}`} />
             <div>
                 <h2>General Statement</h2>
-                <p>This is a general statement wow!! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus deserunt, laboriosam quibusdam, sunt dicta deleniti earum veniam nisi quam facere itaque tempora sequi ad vero laudantium repellendus sit inventore eum?</p>
+                <p>{restData.acf.general_statement}</p>
                 <div>
-                    <a href="">View Site</a>
+                    <a href={`${restData.acf.live_site}`} target='_blank' rel="noopener noreferrer">View Site</a>
                     <a href="">View Code</a>
                 </div>
             </div>
@@ -53,9 +81,11 @@ function SingleDevPage() {
 
                 </TabPanel>
             </Tabs>
-        </section>
+        </section> 
+        </> :
+        <p>Loading...</p>
+      }
     </>
-
   )
 }
 

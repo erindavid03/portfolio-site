@@ -69,14 +69,14 @@ function SingleArtwork() {
           <h2>Reflection</h2>
           <p>{restData.acf.reflection}</p>
         </TabPanel>
-        <TabPanel>
+        { restData.acf.wip_pictures && <TabPanel>
           <h2>In Progress</h2>
           <p>Here are pictures during the progress</p>
           <div>
 
           </div>
 
-        </TabPanel>
+        </TabPanel>}
       </Tabs>
     </section> 
     </>: 
