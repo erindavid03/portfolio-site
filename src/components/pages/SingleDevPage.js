@@ -41,9 +41,9 @@ function SingleDevPage() {
             <div>
                 <h2>General Statement</h2>
                 <p>{restData.acf.general_statement}</p>
-                <div>
+                <div className='button-links'>
                     <a href={`${restData.acf.live_site}`} target='_blank' rel="noopener noreferrer">View Site</a>
-                    <a href="">View Code</a>
+                    <a href={`${restData.acf.github}`} target='_blank' rel="noopener noreferrer">View Code</a>
                 </div>
             </div>
           </div>
