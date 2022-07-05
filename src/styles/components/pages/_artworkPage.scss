@@ -1,3 +1,40 @@
 // artwork partial
 @use '../../base/variables' as *;
 @use '../../base/mixins' as *;
+
+.artwork{
+    @include flex-column;
+    justify-items: center;
+    @media(min-width: $large-tablet){
+        @include flex-row;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 898.4px;
+        margin: 0 auto;
+    }
+
+    @media(min-width:$desktop){
+        max-width: 100%;
+    }
+    
+    .page-intro{
+        @include flex-column;
+        align-items: center;
+
+        @media(min-width:$tablet){
+            max-width: 523.2px;
+            margin: 0 auto;
+
+            img{
+                max-width: 288px;
+            }
+        }
+    }
+
+    div+a:nth-child(2){
+        padding: 1.5rem 0 0 0;
+    }
+
+    @include card;
+
+}
