@@ -86,7 +86,7 @@ function SingleDevPage() {
                 <TabPanel>
                   <h2>Key Features</h2>
                   <p>Theses are some of my favourite features from {restData.title.rendered}!</p>
-                  {restData['favourite_features'].map((feature, index) => <KeyFeatures key={index} feature={feature}/>)}
+                  {restData.acf['favourite_features'].map( (feature, index) => <KeyFeatures key={index} thing={feature}/>)}
                 </TabPanel>
             </Tabs>
         </section> 

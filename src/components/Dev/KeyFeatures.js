@@ -1,9 +1,9 @@
 import React from 'react';
 
-function KeyFeatures({feature}) {
+function KeyFeatures( {thing} ) {
   return (
     <div>
-        <h3>Feature Title</h3>
+        <h3>{thing.feature_title}</h3>
         <p>put stuff about feature here</p>
         <img src="" alt="" />
     </div>
