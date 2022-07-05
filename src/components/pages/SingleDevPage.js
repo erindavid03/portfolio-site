@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import KeyFeatures from '../Dev/KeyFeatures';
 
 function SingleDevPage() {
 
@@ -69,21 +70,23 @@ function SingleDevPage() {
                 </TabPanel>
 
                 <TabPanel>
-                <h2>Reflection</h2>
-                <p>This is a reflection. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officia ut, ullam cupiditate eos velit? Illo est aspernatur facilis qui consectetur necessitatibus inventore cum eaque, alias atque optio cupiditate animi?</p>
+                    <h2>Reflection</h2>
+                    <p>This is a reflection. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officia ut, ullam cupiditate eos velit? Illo est aspernatur facilis qui consectetur necessitatibus inventore cum eaque, alias atque optio cupiditate animi?</p>
                 </TabPanel>
 
-                {restData.acf.wip_pictures && <TabPanel>
-                <h2>In Progress</h2>
-                <p>Here are pictures during the progress</p>
-                <div>
-                    {restData.acf['wip_pictures'].map( wip => <img key={wip.id} src={wip.url} alt={wip.alt}/>)}
-                </div>
+                {restData.acf.wip_pictures && 
+                <TabPanel>
+                  <h2>In Progress</h2>
+                  <p>Here are pictures during the progress</p>
+                  <div>
+                      {restData.acf['wip_pictures'].map( wip => <img key={wip.id} src={wip.url} alt={wip.alt}/>)}
+                  </div>
                 </TabPanel>}
 
                 <TabPanel>
-                <h2>Key Features</h2>
-                <p>add your key features here?</p>
+                  <h2>Key Features</h2>
+                  <p>Theses are some of my favourite features from {restData.title.rendered}!</p>
+                  {restData['favourite_features'].map((feature, index) => <KeyFeatures key={index} feature={feature}/>)}
                 </TabPanel>
             </Tabs>
         </section> 
