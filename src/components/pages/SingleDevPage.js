@@ -71,13 +71,13 @@ function SingleDevPage() {
 
                 <TabPanel>
                     <h2>Reflection</h2>
-                    <p>This is a reflection. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officia ut, ullam cupiditate eos velit? Illo est aspernatur facilis qui consectetur necessitatibus inventore cum eaque, alias atque optio cupiditate animi?</p>
+                    <p>{restData.acf.reflection}</p>
                 </TabPanel>
 
                 {restData.acf.wip_pictures && 
                 <TabPanel>
                   <h2>In Progress</h2>
-                  <p>Here are pictures during the progress</p>
+                  <p>Here are pictures during the development progress!</p>
                   <div>
                       {restData.acf['wip_pictures'].map( wip => <img key={wip.id} src={wip.url} alt={wip.alt}/>)}
                   </div>
@@ -86,7 +86,7 @@ function SingleDevPage() {
                 <TabPanel>
                   <h2>Key Features</h2>
                   <p>Theses are some of my favourite features from {restData.title.rendered}!</p>
-                  {restData.acf['favourite_features'].map( (feature, index) => <KeyFeatures key={index} thing={feature}/>)}
+                  {restData.acf['favourite_features'].map( (feature, index) => <KeyFeatures key={index} feature={feature}/>)}
                 </TabPanel>
             </Tabs>
         </section> 
