@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 //all mixins here
 @mixin flex-row {
     display: flex;
@@ -11,4 +13,71 @@
 
 @mixin grid{
     display: grid;
+}
+
+@mixin card{
+    
+    .card{
+        @include flex-column;
+        align-items: center;
+        margin: 0 auto;
+
+        a{
+            font-size: $sub-heading-font-size;
+            text-align: center;
+            font-family: $font-heading;
+        }
+
+        div:nth-child(1){
+            position: relative;
+        }
+
+        img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover
+        }
+
+        .work-blurb{
+            @include flex-column;
+            align-items: center;
+            background-color: #000000c3;
+            max-width: 250px;
+            padding: 0 0 1.15rem 0;
+            position: absolute;
+            opacity: 0;
+            transition: opacity .3s ease-in;
+
+            p,
+            a{
+                color: $main-color;
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            a:hover{
+                border-bottom: 1px solid $main-color;
+                transition: border-bottom 5s ease-in;
+            }
+
+            //for hover
+            &:hover{
+                opacity: 100%;
+                transition: opacity .3s ease-in;
+            }
+        }
+
+        //this block is for hiding the project blurb at a certain media query
+        &.slide{
+            @include flex-column;
+            align-items: center;
+
+            div:nth-child(3){
+                display: none;
+            }
+        }
+
+
+    }
+
 }
