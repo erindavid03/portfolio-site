@@ -4,6 +4,10 @@ import { useState, useEffect } from 'react';
 
 
 function ArtworkCard({artwork}) {
+
+   // Shortens description to maintain card info positioning
+  const shortDesc = artwork.acf.general_statement.substring(0, 100) + ' ...';
+
   const [isWide, setIsWide] = useState(
     window.matchMedia("(min-width: 64em)").matches
     );
@@ -19,7 +23,7 @@ function ArtworkCard({artwork}) {
         <div>
             <img src={artwork.acf.artwork_image}/> 
         </div>
-        <Link to={`/artworks/${artwork.id}`}>{artwork.title.rendered}</Link>
+        {!isWide && <Link to={`/artworks/${artwork.id}`}>{artwork.title.rendered}</Link>}
 
         <div className='work-blurb'>
             <p>{artwork.acf.general_statement}</p>
