@@ -47,6 +47,10 @@ function SingleDevPage() {
                     <a href={`${restData.acf.live_site}`} target='_blank' rel="noopener noreferrer">View Site</a>
                     <a href={`${restData.acf.github}`} target='_blank' rel="noopener noreferrer">View Code</a>
                 </div>
+                <h2>Tools Used:</h2>
+                <ul>
+                  { restData.acf['tools'].map( (tool, index) => <li key={index}>{tool.tool_name}</li>)}
+                </ul>
             </div>
           </div>
         </section>
