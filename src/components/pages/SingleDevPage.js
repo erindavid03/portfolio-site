@@ -52,14 +52,19 @@ function SingleDevPage() {
         <section>
             <Tabs class='content-tabs' aria-label='tabs'>
                 <TabList>
-                <Tab>About This Piece</Tab>
-                <Tab>Reflection</Tab>
-                {restData.acf.wip_pictures && <Tab>In Progress Pictures</Tab>}
+                  <Tab>About {restData.title.rendered}</Tab>
+                  <Tab>Reflection</Tab>
+                  {restData.acf.wip_pictures && <Tab>In Progress Pictures</Tab>}
+                  <Tab>Key Features</Tab>
                 </TabList>
 
                 <TabPanel>
-                <h2>About 'TITLE'</h2>
-                <p>This is stuff about the piece. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi explicabo fuga ex. Repudiandae, itaque quae cum suscipit atque perspiciatis. Fugit iure aut molestias aliquam odio dolorum quidem ducimus ab?</p>
+                  <h2>Goals</h2>
+                  <ul className='goals'>
+                    {restData.acf['goals'].map( (goal, index) => <li key={index}>{goal.goal}</li>)}
+                  </ul>
+                  <h2>Process</h2>
+                  <p>{restData.acf.process}</p>
                 </TabPanel>
 
                 <TabPanel>
@@ -71,16 +76,14 @@ function SingleDevPage() {
                 <h2>In Progress</h2>
                 <p>Here are pictures during the progress</p>
                 <div>
-                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
-                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/002/205/307/1f7.jpg' />
+                    {restData.acf['wip_pictures'].map( wip => <img key={wip.id} src={wip.url} alt={wip.alt}/>)}
                 </div>
                 </TabPanel>}
+
+                <TabPanel>
+                <h2>Key Features</h2>
+                <p>add your key features here?</p>
+                </TabPanel>
             </Tabs>
         </section> 
         </> :
