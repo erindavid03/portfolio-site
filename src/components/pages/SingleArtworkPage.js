@@ -65,17 +65,19 @@ function SingleArtwork() {
           <h2>About {restData.title.rendered}</h2>
           <p>{restData.acf.about_this_piece}</p>
         </TabPanel>
+
         <TabPanel>
           <h2>Reflection</h2>
           <p>{restData.acf.reflection}</p>
         </TabPanel>
-        { restData.acf.wip_pictures && <TabPanel>
+
+        { restData.acf.wip_pictures && 
+        <TabPanel>
           <h2>In Progress</h2>
-          <p>Here are pictures during the progress</p>
+          <p>Here are pictures during the progress!</p>
           <div>
 
           </div>
-
         </TabPanel>}
       </Tabs>
     </section> 
