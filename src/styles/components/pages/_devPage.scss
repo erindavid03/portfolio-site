@@ -17,15 +17,18 @@
     }
     
     .page-intro{
-        @include flex-column;
-        align-items: center;
+        padding-bottom: 5rem;
+        
+        img{
+            max-width: 277px;
+            margin: 0 auto;
+        }
 
         @media(min-width:$tablet){
             max-width: 523.2px;
-            margin: 0 auto;
 
-            img{
-                max-width: 288px;
+            h1{
+                text-align: left;
             }
         }
     }
