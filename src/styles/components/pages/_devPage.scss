@@ -7,7 +7,6 @@
     @media(min-width: $large-tablet){
         @include flex-row;
         justify-content: space-between;
-        align-items: center;
         max-width: 898.4px;
         margin: 0 auto;
     }
@@ -19,7 +18,8 @@
     .page-intro{
         @include flex-column;
         align-items: center;
-        padding-bottom: 5rem;
+        justify-content: space-between;
+        padding: 0 1rem 0 0 ;
         
         img{
             max-width: 277px;
@@ -28,7 +28,6 @@
 
         @media(min-width:$tablet){
             max-width: 523.2px;
-            display: block;
 
             h1{
                 text-align: left;
