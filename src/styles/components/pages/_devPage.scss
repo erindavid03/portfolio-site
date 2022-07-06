@@ -4,6 +4,8 @@
 .development{
     @include flex-column;
     justify-items: center;
+
+    // this makes the project grid and text ccontent go side by side
     @media(min-width: $large-tablet){
         @include flex-row;
         justify-content: space-between;
@@ -28,10 +30,16 @@
 
         @media(min-width:$tablet){
             max-width: 523.2px;
+            margin: 0 auto;
 
             h1{
                 text-align: left;
             }
+        }
+
+        // removes the margin 0 auto settings for the text
+        @media(min-width: $desktop){
+            margin: 0;
         }
     }
 
