@@ -3,6 +3,7 @@
 //GENERAL STYLES HERE
 
 body{
+    // typography
     font-family: $font-body;
     color: $font-color-main;
     line-height: 1.5;
@@ -35,9 +36,29 @@ body{
     ul{
         list-style: none;
     }
-    
+}
+
+#root{
+        
+    // layout
+    display: grid;
+    width: 100%;
+    grid-template: "head head head head head head"
+                    ". main main main main ."
+                    "foot foot foot foot foot foot"
+    ;
+
     main{
         padding: 2rem 1rem;
+        grid-area: main;
+    }
+
+    header{
+        grid-area: head;
+    }
+
+    footer{
+        grid-area: foot;
     }
 
 }
