@@ -2,6 +2,27 @@
 
 //GENERAL STYLES HERE
 
+// scroller styles
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: $main-color;
+}
+::-webkit-scrollbar-track {
+    background: $main-color;
+    border-radius: 0px;
+    width: 0px;
+    border: 1px dotted #656565;
+}
+::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border: 1px solid $border-colors;
+    border-radius: 0px;
+    background-color: $nav-hover;
+}
+
 body{
     // typography
     font-family: $font-body;
