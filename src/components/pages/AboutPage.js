@@ -4,7 +4,7 @@ import HeroImage from '../images/me-picture.png';
 function AboutPage() {
   return (
   <>
-    <div>
+    <div className='about'>
       <section>
         <h1>About Me</h1>
         <img src={HeroImage} alt="an image of a girl holding a cat" />
