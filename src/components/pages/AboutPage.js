@@ -17,31 +17,40 @@ function AboutPage() {
 
       <section>
         <h2>My skills</h2>
-        <h3>Development</h3>
-        <ul>
-          <li>React</li>
-          <li>PHP</li>
-          <li>WordPress</li>
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS/SASS</li>
-          <li>jQuery</li>
-        </ul>
+        <div>
+          <article>
+            <h3>Development</h3>
+            <ul>
+              <li>React</li>
+              <li>PHP</li>
+              <li>WordPress</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS/SASS</li>
+              <li>jQuery</li>
+            </ul>
+          </article>
+          
 
-        <h3>Design</h3>
-          <ul>
-            <li>Adobe XD</li>
-            <li>Figma</li>
-            <li>Adobe Illustrator</li>
-            <li>InVision</li>
-          </ul>
+          <article>
+            <h3>Design</h3>
+              <ul>
+                <li>Adobe XD</li>
+                <li>Figma</li>
+                <li>Adobe Illustrator</li>
+                <li>InVision</li>
+              </ul>
+            </article>
 
-        <h3>Art</h3>
-        <ul>
-          <li>Adobe Photoshop</li>
-          <li>Adobe Premiere</li>
-          <li>Adobe Animate</li>
-        </ul>
+          <article>
+            <h3>Art</h3>
+            <ul>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Premiere</li>
+              <li>Adobe Animate</li>
+            </ul>
+          </article>
+        </div>
       </section>
     </div>
   </>

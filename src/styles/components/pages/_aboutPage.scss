@@ -1,2 +1,8 @@
 @use '../../base/variables' as *;
 @use '../../base/mixins' as *;
+
+.about{
+   section:nth-child(2){
+    background-color: pink;
+   }
+}
