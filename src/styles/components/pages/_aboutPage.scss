@@ -12,7 +12,14 @@
     }
 
     .page-intro{
-        
+        @include flex-column;
+        align-items: center;
+
+        @media (min-width:$large-tablet){
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           gap: 1rem;
+        }
     }
 
     section:nth-child(2) {
