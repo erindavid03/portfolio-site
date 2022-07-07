@@ -29,6 +29,7 @@
 
         .button-links{
             @include flex-row;
+            margin: 1rem 0;
 
             @include button-style;
         }
@@ -45,4 +46,13 @@
         list-style: "\♡   ";
         line-height: 2;
     }
+}
+
+// FOR REACT TAB STYLES I WANT TO CHANGE
+.react-tabs__tab-list {
+    border-bottom: 1px solid $accent-border;
+}
+
+.react-tabs__tab--selected {
+    border-color: $accent-border;
 }
