@@ -11,3 +11,17 @@
         margin-right: 1rem;
     }
 }
+
+.piece-about{
+    img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    div{
+        background-color: pink;
+        @include flex-column;
+        align-items: center;
+    }
+}

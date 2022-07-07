@@ -42,7 +42,7 @@ function SingleDevPage() {
             <div>
                 <h2>General Statement</h2>
                 <p>{restData.acf.general_statement}</p>
-                <p>Kind: <span className='media-and-size'>{restData.acf.kind}</span></p>
+                <p className='grey'>Kind: <span className='media-and-size'>{restData.acf.kind}</span></p>
                 <div className='button-links'>
                     <a href={`${restData.acf.live_site}`} target='_blank' rel="noopener noreferrer">View Site</a>
                     <a href={`${restData.acf.github}`} target='_blank' rel="noopener noreferrer">View Code</a>
