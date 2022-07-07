@@ -69,8 +69,8 @@ function SingleDevPage() {
                   <ul className='goals'>
                     {restData.acf['goals'].map( (goal, index) => <li key={index}>{goal.goal}</li>)}
                   </ul>
-                  <h2>Process</h2>
-                  <p>{restData.acf.process}</p>
+                  <h2>What is {restData.title.rendered}??</h2>
+                  <p>{restData.acf.more_about_project}</p>
                 </TabPanel>
 
                 <TabPanel>
