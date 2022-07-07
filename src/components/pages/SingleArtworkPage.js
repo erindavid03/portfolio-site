@@ -43,13 +43,6 @@ function SingleArtwork() {
         </div>
       </div>
       
-      <div>
-        <h2>Tools Used</h2>
-        <ul>
-        { //this outputs the tools used acf repeater field. make sure you give it a key (index) and use the array thing as supposed to acf.tools
-        restData.acf['tools'].map( (tool, index) => <li key={index}>{tool.tools_used}</li>)}
-        </ul>
-      </div>
 
      </section>
 
@@ -62,6 +55,11 @@ function SingleArtwork() {
         </TabList>
 
         <TabPanel>
+          <h2>Tools Used</h2>
+          <ul>
+          { //this outputs the tools used acf repeater field. make sure you give it a key (index) and use the array thing as supposed to acf.tools
+          restData.acf['tools'].map( (tool, index) => <li key={index}>{tool.tools_used}</li>)}
+          </ul>
           <h2>About {restData.title.rendered}</h2>
           <p>{restData.acf.about_this_piece}</p>
         </TabPanel>
