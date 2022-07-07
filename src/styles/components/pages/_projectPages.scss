@@ -20,8 +20,17 @@
     }
 
     div{
-        background-color: pink;
         @include flex-column;
         align-items: center;
+
+        .grey{
+            color: $border-colors;
+        }
+
+        .button-links{
+            @include flex-row;
+
+            @include button-style;
+        }
     }
 }

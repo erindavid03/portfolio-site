@@ -39,7 +39,7 @@ function SingleArtwork() {
         <div>
           <h2>General info</h2>
           <p>{restData.acf.general_statement}</p>
-          <p className='media-and-size'> {restData.acf.kind} || {restData.acf.dimensions}</p>
+          <p className='grey'> {restData.acf.kind} || {restData.acf.dimensions}</p>
         </div>
       </div>
       
