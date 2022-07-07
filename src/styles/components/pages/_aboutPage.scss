@@ -2,38 +2,37 @@
 @use '../../base/mixins' as *;
 
 .about{
+    margin: 1rem 0;
+
     img{
-        max-width: 452px;
+        max-width: 355px;
         object-fit: cover;
         border: 1px solid #656565;
         border-radius: 2px;
         padding: 1rem 1rem 4rem;
-        margin: 0 auto;   
+        margin: 0 auto;  
+        
+        @media(min-width: $desktop){
+            max-width: 450px;
+        }
     }
 
     .page-intro{
         @include flex-column;
         align-items: center;
 
-        @media (min-width:$large-tablet){
+        @media (min-width:$desktop){
            display: grid;
            grid-template-columns: 1fr 1fr;
            gap: 1rem;
         }
     }
 
-    section:nth-child(2) {
-        padding-top: 1rem;
-        
-        h2{ 
-            text-align: center;
-        }
-    }
 
    .toolbox{
         background: $gradient;
         border: 1px solid #656565;
-        border-radius: 2px;
+        border-radius: .5rem;
         font-size: .9em;
         height: 177px;
         overflow: auto;
@@ -65,6 +64,10 @@
                 color: $font-color-main;
                 text-align: left;
             }
+        }
+
+        @media(min-width: $desktop){
+            height: 100%;
         }
 
    }
