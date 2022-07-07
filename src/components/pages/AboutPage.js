@@ -16,7 +16,7 @@ function AboutPage() {
       </section>
 
       <section>
-        <h2>My skills</h2>
+        <h2>My skills {'<3'}</h2>
         <div>
           <article>
             <h3>Development</h3>

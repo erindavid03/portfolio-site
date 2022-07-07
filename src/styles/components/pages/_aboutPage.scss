@@ -2,7 +2,34 @@
 @use '../../base/mixins' as *;
 
 .about{
-   section:nth-child(2){
-    background-color: pink;
+    section:nth-child(2) {
+        padding-top: 1rem;
+        
+        h2{ 
+            text-align: center;
+        }
+    }
+
+   section:nth-child(2) div{
+    @include flex-row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    
+        ul{
+            padding: .5rem;
+            list-style: "\♡";
+            line-height: 2;
+        }
+        
+        article{
+            padding: 0 1rem;
+            max-width: 165px;
+        }
+
    }
+   
+   
 }
+
