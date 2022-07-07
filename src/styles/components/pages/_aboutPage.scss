@@ -5,12 +5,20 @@
     margin: 1rem 0;
 
     img{
-        max-width: 355px;
+        
         object-fit: cover;
         border: 1px solid #656565;
         border-radius: 2px;
         padding: 1rem 1rem 4rem;
         margin: 0 auto;  
+
+        @media(max-width: $tablet){
+            max-width: 236px;
+        }
+
+        @media(min-width: $tablet){
+            max-width: 350px;
+        }
         
         @media(min-width: $desktop){
             max-width: 450px;
