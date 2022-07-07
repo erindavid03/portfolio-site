@@ -35,8 +35,8 @@ function SingleDevPage() {
    { isLoaded ? 
    <>
      <Link to='/development' className='back-to-menu'>Back to Development</Link>
+     <h1>{restData.title.rendered}</h1>  
         <section className='piece-about'>
-          <h1>{restData.title.rendered}</h1>  
           <div>
             <img src={`${restData.acf.finished_product}`} />
             <div>
