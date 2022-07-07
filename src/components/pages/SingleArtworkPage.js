@@ -31,8 +31,8 @@ function SingleArtwork() {
     <>
     { isLoaded ? 
     <>
-    <Link to='/artwork'>Back to Artwork</Link>
-    <section>
+    <Link to='/artwork' className='back-to-menu'>Back to Artwork</Link>
+    <section className='piece-about'>
       <h1>{restData.title.rendered}</h1>
       <div>
         <img src={`${restData.acf.artwork_image}`} />
@@ -53,7 +53,7 @@ function SingleArtwork() {
 
      </section>
 
-    <section>
+    <section className='piece-tabs'>
       <Tabs className='content-tabs' aria-label='tabs'>
         <TabList>
           <Tab>About</Tab>

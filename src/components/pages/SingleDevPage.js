@@ -34,8 +34,8 @@ function SingleDevPage() {
     <>
    { isLoaded ? 
    <>
-     <Link to='/development'>Back to Development</Link>
-        <section>
+     <Link to='/development' className='back-to-menu'>Back to Development</Link>
+        <section className='piece-about'>
           <h1>{restData.title.rendered}</h1>  
           <div>
             <img src={`${restData.acf.finished_product}`} />
@@ -55,7 +55,7 @@ function SingleDevPage() {
           </div>
         </section>
 
-        <section>
+        <section className='piece-tabs'>
             <Tabs class='content-tabs' aria-label='tabs'>
                 <TabList>
                   <Tab>About {restData.title.rendered}</Tab>
