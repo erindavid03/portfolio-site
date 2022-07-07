@@ -3,7 +3,7 @@
 
 .about{
     img{
-        max-width: 355px;
+        max-width: 452px;
         object-fit: cover;
         border: 1px solid #656565;
         border-radius: 2px;
@@ -30,22 +30,41 @@
         }
     }
 
-   section:nth-child(2) div{
-    @include flex-row;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
+   .toolbox{
+        background: $gradient;
+        border: 1px solid #656565;
+        border-radius: 2px;
+        font-size: .9em;
+        height: 177px;
+        overflow: auto;
+        margin: 3rem 0;
+
+        h2{
+            padding: 0 1rem;
+        }
 
     
         ul{
-            padding: .5rem;
-            list-style: "\♡";
+            @include flex-row;
+            flex-wrap: wrap;
+            list-style: "\♡ ";
             line-height: 2;
+
+            li{
+                padding-right: 2rem;
+            }
         }
         
         article{
             padding: 0 1rem;
-            max-width: 165px;
+
+            h3{
+                background: $nav-hover;
+                font-size: 1em;
+                padding: 1px;
+                color: $font-color-main;
+                text-align: left;
+            }
         }
 
    }
