@@ -47,10 +47,7 @@ function SingleDevPage() {
                     <a href={`${restData.acf.live_site}`} target='_blank' rel="noopener noreferrer">View Site</a>
                     <a href={`${restData.acf.github}`} target='_blank' rel="noopener noreferrer">View Code</a>
                 </div>
-                <h2>Tools Used:</h2>
-                <ul>
-                  { restData.acf['tools'].map( (tool, index) => <li key={index}>{tool.tool_name}</li>)}
-                </ul>
+                
             </div>
           </div>
         </section>
@@ -60,8 +57,8 @@ function SingleDevPage() {
                 <TabList>
                   <Tab>About {restData.title.rendered}</Tab>
                   <Tab>Reflection</Tab>
-                  {restData.acf.wip_pictures && <Tab>In Progress Pictures</Tab>}
                   <Tab>Key Features</Tab>
+                  {restData.acf.wip_pictures && <Tab>In Progress Pictures</Tab>}
                 </TabList>
 
                 <TabPanel>
@@ -69,13 +66,21 @@ function SingleDevPage() {
                   <ul className='goals'>
                     {restData.acf['goals'].map( (goal, index) => <li key={index}>{goal.goal}</li>)}
                   </ul>
-                  <h2>What is {restData.title.rendered}??</h2>
-                  <p>{restData.acf.more_about_project}</p>
+                  <h2>Tools Used:</h2>
+                  <ul>
+                    { restData.acf['tools'].map( (tool, index) => <li key={index}>{tool.tool_name}</li>)}
+                  </ul>
                 </TabPanel>
 
                 <TabPanel>
                     <h2>Reflection</h2>
                     <p>{restData.acf.reflection}</p>
+                </TabPanel>
+
+                <TabPanel>
+                  <h2>Key Features</h2>
+                  <p>Theses are some of my favourite features from {restData.title.rendered}!</p>
+                  {restData.acf['favourite_features'].map( (feature, index) => <KeyFeatures key={index} feature={feature}/>)}
                 </TabPanel>
 
                 {restData.acf.wip_pictures && 
@@ -86,12 +91,6 @@ function SingleDevPage() {
                       {restData.acf['wip_pictures'].map( wip => <img key={wip.id} src={wip.url} alt={wip.alt}/>)}
                   </div>
                 </TabPanel>}
-
-                <TabPanel>
-                  <h2>Key Features</h2>
-                  <p>Theses are some of my favourite features from {restData.title.rendered}!</p>
-                  {restData.acf['favourite_features'].map( (feature, index) => <KeyFeatures key={index} feature={feature}/>)}
-                </TabPanel>
             </Tabs>
         </section> 
         </> :
