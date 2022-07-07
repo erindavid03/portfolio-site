@@ -34,7 +34,7 @@ function SingleArtwork() {
     <Link to='/artwork' className='back-to-menu'>Back to Artwork</Link>
     <section className='piece-about'>
       <h1>{restData.title.rendered}</h1>
-      <div>
+      <div className='general-info'>
         <img src={`${restData.acf.artwork_image}`} />
         <div>
           <h2>General info</h2>

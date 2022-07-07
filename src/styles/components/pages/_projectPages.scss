@@ -13,13 +13,16 @@
 }
 
 .piece-about{
+    margin: 1rem 0 3rem;
+
     img{
         width: 250px;
         height: 250px;
         object-fit: cover;
+        padding-right: 2rem;
     }
 
-    div{
+    .general-info{
         @include flex-column;
         align-items: center;
 
@@ -29,9 +32,17 @@
 
         .button-links{
             @include flex-row;
-            margin: 1rem 0;
 
             @include button-style;
+        }
+        
+        @media(min-width: $tablet){
+            @include flex-row;
+            justify-content: space-between;
+
+            div{
+                max-width: 960px;
+            }
         }
     }
 }
