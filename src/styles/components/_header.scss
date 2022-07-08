@@ -6,6 +6,7 @@ header{
 
     @media(min-width: $desktop){
         display: block;
+        background: $gradient-header;
         border-bottom: solid 1px $border-colors;
         .header-wrap{
             @include flex-row;
