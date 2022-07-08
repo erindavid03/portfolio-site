@@ -10,9 +10,9 @@ function AboutPage() {
           <img src={HeroImage} alt="an image of a girl holding a cat" />
           <div>
             <h1>Hi there! Im Erin {':)'}</h1>
-            <p>I am a Front-End Web Developer from the lower mainland with a passion for designing original creations. Whether it be a website or an art piece, I ensure that all my work is thoughtful, creative, and polished!
+            <p>I am a Front-End Web Developer from the lower mainland with a passion for designing original creations.
               Since I grew up around the time that the internet was in its heyday, a lot of my inspiration comes from early 2000s nostalgia and modern-day aesthetics. 
-              After gaining an in-depth understanding of the best practices in UX/UI Design and Web Development, it is a personal goal for me to create sites that are pleasing to look at, and take you back to the joys of growing up with the internet!
+              After gaining an in-depth understanding of the best practices in UX/UI Design and Web Development, it is a personal goal for me to create sites that are pleasing to look at, but take you back to the joys of growing up with the internet!
               When I am not around my computer, I enjoy doodling away in my sketchbooks while spinning my favourite records from my collection! Either that or I’m plotting my next plan for world domination with my army of burnt toast {'>:D'}
             </p>
 
