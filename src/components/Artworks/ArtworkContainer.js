@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import ArtworkCard from './ArtworkCard';
-import Loading from '../images/loading.gif';
+import Loading from '../../components/Loading';
 
 function ArtworkContainer() {
     
@@ -28,7 +28,7 @@ function ArtworkContainer() {
     <div className='grid-contain'>
     {isLoaded === true ?
       restData.map(artwork => <ArtworkCard key={artwork.id} artwork={artwork}/>) :
-      <img src={`${Loading}`} alt="loading..." className='load'/>
+      <Loading />
     }
 
   </div>

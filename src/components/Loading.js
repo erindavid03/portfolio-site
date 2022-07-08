@@ -1,10 +1,10 @@
 import React from 'react'
-import Loading from '../images/loading.gif';
+import LoadingGif from '../components/images/loading.gif';
 
 function Loading() {
   return (
     <div className='load'>
-        <img src={`${Loading}`} alt="loading..." className='load'/>
+        <img src={`${LoadingGif}`} alt="loading..."/>
     </div>
   )
 }
