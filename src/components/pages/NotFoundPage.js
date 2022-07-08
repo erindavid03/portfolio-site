@@ -3,7 +3,7 @@ import WorkLinks from '../WorkLinks'
 
 function NotFoundPage() {
   return (
-    <section>
+    <section className='not-found'>
       <h1>Whats this? An empty room!</h1>
       <p>Thats a bummer! looks like we don't have what you are looking for ;{'('} unless, of course, you were looking for nothing the whole time!
           In that case, congratulations! You've found nothing :D</p>
