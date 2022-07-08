@@ -24,7 +24,7 @@ function ArtworkContainer() {
 
 
   return (
-    <div>
+    <div className='grid-contain'>
     {isLoaded === true ?
       restData.map(artwork => <ArtworkCard key={artwork.id} artwork={artwork}/>) :
       <p>Loading...</p>

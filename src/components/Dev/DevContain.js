@@ -23,7 +23,7 @@ function DevContain() {
     }, [apiPath]) 
 
   return (
-    <div>
+    <div className='grid-contain'>
     {isLoaded === true ?
       restData.map(project => <DevCard key={project.id} project={project}/>) :
       <p>Loading...</p>
