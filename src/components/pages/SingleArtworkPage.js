@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Loading from '../images/loading.gif';
 import 'react-tabs/style/react-tabs.css';
+
 
 function SingleArtwork() {
 
@@ -81,7 +83,7 @@ function SingleArtwork() {
     </section> 
     </>: 
   
-    <p>loading... </p>}
+    <img src={`${Loading}`} alt="loading..." className='load'/>}
     </>
   )
 }
