@@ -68,10 +68,13 @@ body{
 }
 
 #root{
-    max-width: 90rem;
-    margin: 1rem auto;
-    background: $main-color;
     border: 1px solid $border-colors;
+    background: $main-color;
+    
+    @media(min-width: $desktop){
+        max-width: 90rem;
+        margin: 1rem auto;
+    }
     
         
     // layout
