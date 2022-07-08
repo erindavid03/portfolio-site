@@ -15,8 +15,10 @@ function AboutPage() {
               After gaining an in-depth understanding of the best practices in UX/UI Design and Web Development, it is a personal goal for me to create sites that are pleasing to look at, but take you back to the joys of growing up with the internet!
               When I am not around my computer, I enjoy doodling away in my sketchbooks while spinning my favourite records from my collection! Either that or I’m plotting my next plan for world domination with my army of burnt toast {'>:D'}
             </p>
-
-            <section className='toolbox'>
+          </div>
+        </div>
+      </section>
+      <section className='toolbox'>
               <h2>My Tool box {'<3'}</h2>
               <div>
                 <article>
@@ -53,10 +55,6 @@ function AboutPage() {
                 </article>
               </div>
             </section>
-
-          </div>
-        </div>
-      </section>
     </div>
   </>
   )
