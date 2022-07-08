@@ -5,8 +5,7 @@ function AboutPage() {
   return (
   <>
     <div className='about'>
-      <section>
-        <div className='page-intro'>
+      <section className='page-intro'>
           <img src={HeroImage} alt="an image of a girl holding a cat" />
           <div>
             <h1>Hi there! Im Erin {':)'}</h1>
@@ -16,8 +15,8 @@ function AboutPage() {
               When I am not around my computer, I enjoy doodling away in my sketchbooks while spinning my favourite records from my collection! Either that or I’m plotting my next plan for world domination with my army of burnt toast {'>:D'}
             </p>
           </div>
-        </div>
       </section>
+      
       <section className='toolbox'>
               <h2>My Tool box {'<3'}</h2>
               <div>

@@ -29,6 +29,10 @@
         @include flex-column;
         align-items: center;
 
+        p{
+            padding: 0 4rem 0 0;
+        }
+
         @media (min-width:$desktop){
            display: grid;
            grid-template-columns: 1fr 1fr;
@@ -44,7 +48,8 @@
         font-size: .9rem;
         height: 177px;
         overflow: auto;
-        margin: 3rem 0;
+        margin: 3rem auto;
+        max-width: 73rem;
 
         h2{
             padding: 0 1rem;
