@@ -3,6 +3,11 @@
 
 .desktop-header{
     display: none;
+    img{
+        width: 3rem;
+        height: 3rem;
+        padding: 0 1rem;
+    }
 
     @media(min-width: $desktop){
         display: block;
@@ -11,6 +16,7 @@
         .header-wrap{
             @include flex-row;
             justify-content: space-between;
+            align-items: center;
             font-size: $sub-heading-font-size;
             padding: 0 1rem;
             line-height: 1.67rem;

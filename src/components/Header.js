@@ -1,11 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import CatLogo from './images/logo.png';
 
 function Header() {
   return (
     <header className='desktop-header'>
       <div className="header-wrap">
-        <p>place</p>
+        <div>
+          <img src={`${CatLogo}`} alt="cat logo"/>
+        </div>
 
         <nav>
             <ul>
