@@ -4,7 +4,8 @@ import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import KeyFeatures from '../Dev/KeyFeatures';
-import { Gallery, Item } from 'react-photoswipe-gallery'
+import { Gallery, Item } from 'react-photoswipe-gallery';
+import Loading from '../../components/Loading';
 import 'photoswipe/style.css';
 
 
@@ -105,7 +106,7 @@ function SingleDevPage() {
             </Tabs>
         </section> 
         </> :
-        <p>Loading...</p>
+        <Loading/>
       }
     </>
   )

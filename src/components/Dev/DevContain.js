@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import DevCard from './DevCard';
-import Loading from '../images/loading.gif';
+import Loading from '../../components/Loading';
 
 function DevContain() {
 
@@ -27,7 +27,7 @@ function DevContain() {
     <div className='grid-contain'>
     {isLoaded === true ?
       restData.map(project => <DevCard key={project.id} project={project}/>) :
-      <img src={`${Loading}`} alt="loading..." className='load'/>
+      <Loading />
     }
 
   </div>
