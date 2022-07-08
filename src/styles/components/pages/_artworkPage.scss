@@ -5,10 +5,10 @@
 .artwork{
     @include flex-column;
     justify-items: center;
+    // this makes the project grid and text ccontent go side by side
     @media(min-width: $large-tablet){
         @include flex-row;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: space-between;
         max-width: 898.4px;
         margin: 0 auto;
     }
@@ -17,17 +17,30 @@
         max-width: 100%;
     }
     
+    
     .page-intro{
         @include flex-column;
         align-items: center;
+        justify-content: space-around;
+        padding: 0 1rem 0 0 ;
+
+        img{
+            max-width: 288px;
+            margin: 0 auto;
+        }
 
         @media(min-width:$tablet){
             max-width: 523.2px;
             margin: 0 auto;
 
-            img{
-                max-width: 288px;
+            h1{
+                text-align: left;
             }
+
+        }
+
+        @media(min-width: $desktop){
+            margin: 0;
         }
     }
 
