@@ -20,11 +20,11 @@
     .page-intro{
         @include flex-column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 0 1rem 0 0 ;
         
         img{
-            max-width: 236px;
+            max-width: 288px;
             margin: 0 auto;
         }
 
