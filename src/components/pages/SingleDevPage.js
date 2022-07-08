@@ -91,6 +91,7 @@ function SingleDevPage() {
                     <Gallery id='gallery--wip'>
                         {restData.acf['wip_pictures'].map( wip => 
                             <Item
+                                key={wip.id}
                                 original={wip.url}
                                 thumbnail={wip.sizes.thumbnail}
                                 width={wip.width}
