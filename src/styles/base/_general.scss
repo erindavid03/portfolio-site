@@ -2,9 +2,11 @@
 
 //GENERAL STYLES HERE
 
+//cursor styles
+ * {
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur272.cur), auto !important;
+} 
 // scroller styles
-
-/* Scrollbar styles */
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
