@@ -28,6 +28,8 @@ body{
     font-family: $font-body;
     color: $font-color-main;
     line-height: 1.5;
+    //background 
+    background: #D7D2D8;;
 
     a{
         font-family: $font-links;
@@ -57,13 +59,22 @@ body{
     ul{
         list-style: none;
     }
+
+    p{
+        padding: 0 1rem;
+    }
 }
 
 #root{
+    max-width: 90rem;
+    margin: 1rem auto;
+    background: $main-color;
+    border: 1px solid $border-colors;
+    
         
     // layout
     display: grid;
-    width: 100%;
+
     grid-template: "head head head head head head"
                     ". main main main main ."
                     "foot foot foot foot foot foot"

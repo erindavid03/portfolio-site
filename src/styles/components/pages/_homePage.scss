@@ -14,13 +14,6 @@
     
     position: relative;
 
-    h1{
-        text-align: center;
-        @media(min-width: $tablet){
-            text-align: left;
-        }
-    }
-
     img{
         max-width: 78%;
         @media(min-width: $tablet){
