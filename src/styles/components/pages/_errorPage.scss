@@ -1,33 +1,48 @@
 @use '../../base/variables' as *;
 @use '../../base/mixins' as *;
 
-.not-found h2{
-    text-align: center;
-    font-family: $font-body;
-    font-size: $body-font-size;
-    padding-top: 2rem;
-}
+.not-found{
+    h1{
+        max-width: 422px;
+        margin: 2rem auto;
+       
+    }
 
-.work-links{
 
-    @media(min-width: $tablet){
-        @include flex-row;
-        justify-content: space-evenly;
-        max-width: 992px;
+    h2{
+        text-align: center;
+        font-family: $font-body;
+        font-size: $body-font-size;
+        padding-top: 2rem;
+    }
+
+    p{
+        max-width: 390px;
         margin: 0 auto;
     }
-    article{
-        margin: 0 auto;
-        max-width: 288px;
-        @include flex-column;
-        align-items: center;
 
-        h3{
-            line-height: 1;
-                &::after {
-                    content: '→';
-                    font-weight: $headings-weight;
-                    margin-left: 1rem;
+
+    .work-links{
+
+        @media(min-width: $tablet){
+            @include flex-row;
+            justify-content: space-evenly;
+            max-width: 992px;
+            margin: 0 auto;
+        }
+        article{
+            margin: 0 auto;
+            max-width: 288px;
+            @include flex-column;
+            align-items: center;
+
+            h3{
+                line-height: 1;
+                    &::after {
+                        content: '→';
+                        font-weight: $headings-weight;
+                        margin-left: 1rem;
+                }
             }
         }
     }
