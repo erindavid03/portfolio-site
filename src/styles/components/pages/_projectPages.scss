@@ -83,3 +83,7 @@
         border: 1px solid $border-colors;
     }
 }
+
+.pswp--zoom-allowed .pswp__button--zoom {
+    display: none;
+}
