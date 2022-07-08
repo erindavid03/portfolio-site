@@ -4,6 +4,9 @@ import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import KeyFeatures from '../Dev/KeyFeatures';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
+
 
 function SingleDevPage() {
 
@@ -26,9 +29,22 @@ function SingleDevPage() {
     fetchData();
   }, [apiPath]);
 
-  if(isLoaded){
-    console.log(restData);
-  }
+  // this is the function for the gallery output! 
+  useEffect(() => {
+    let lightbox = new PhotoSwipeLightbox({
+      gallery: '#gallery--wip',
+      children: 'a',
+      zoom: false,
+      pswpModule: () => import('photoswipe'),
+    });
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+      lightbox = null;
+    };
+  }, []);
+
 
   return (
     <>
@@ -87,8 +103,20 @@ function SingleDevPage() {
                 <TabPanel>
                   <h2>In Progress</h2>
                   <p>Here are pictures during the development progress!</p>
-                  <div>
-                      {restData.acf['wip_pictures'].map( wip => <img key={wip.id} src={wip.url} alt={wip.alt}/>)}
+                  <div className='pswp-gallery' id='gallery--wip'>
+                      {
+                        restData.acf['wip_pictures'].map( wip => (
+                          <a
+                            href={wip.url}
+                            data-pswp-width={wip.width}
+                            data-pswp-height={wip.height}
+                            key={wip.id}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <img src={wip.sizes.thumbnail} alt={wip.alt} />
+                          </a>
+                        ))}
                   </div>
                 </TabPanel>}
             </Tabs>
