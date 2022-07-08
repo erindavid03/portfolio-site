@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
-    <header>
+    <header className='desktop-header'>
       <div className="header-wrap">
         <p>place</p>
 

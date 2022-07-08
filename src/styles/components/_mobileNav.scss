@@ -2,13 +2,13 @@
 @use '../base/mixins' as *;
 
 .mobile-nav{
-    border-top: solid 2px $border-colors;
+    border-top: solid 1px $border-colors;
     position: fixed;
     z-index: 3;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: $main-color;
+    background: $gradient-header;
 
     ul{
         padding: .5rem 1rem;

@@ -8,7 +8,7 @@ import HomeIcon from './images/icons/home.png';
 
 function MobileNav() {
   return (
-    <section className='mobile-nav'>
+    <header className='mobile-nav'>
         <nav>
             <ul>
                 <li>
@@ -43,7 +43,7 @@ function MobileNav() {
                 </li>
             </ul>
         </nav>
-    </section>
+    </header>
   )
 }
 
