@@ -90,6 +90,7 @@
         border-radius: .5rem;
         font-family: $font-body;
         font-weight: $body-weight;
+        transition: background-color .15s ease ;
 
         &:hover,
         &:focus,
