@@ -18,6 +18,7 @@ function App() {
   return (
     <BrowserRouter>
     <Header/>
+    <MobileNav/>
       <main>
         <Routes>
           <Route path={'/'} element={<HomePage/>}/>
@@ -31,7 +32,6 @@ function App() {
         <Contact/>
       </main>
       <Footer/>
-      <MobileNav/>
     </BrowserRouter>
   );
 }
