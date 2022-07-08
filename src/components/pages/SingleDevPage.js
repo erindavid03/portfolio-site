@@ -52,7 +52,7 @@ function SingleDevPage() {
         </section>
 
         <section className='piece-tabs'>
-            <Tabs class='content-tabs' aria-label='tabs'>
+            <Tabs className='content-tabs' aria-label='tabs'>
                 <TabList>
                   <Tab>About {restData.title.rendered}</Tab>
                   <Tab>Reflection</Tab>

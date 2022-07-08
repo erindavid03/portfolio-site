@@ -29,14 +29,15 @@
         @include flex-column;
         align-items: center;
 
-        p{
-            padding: 0 4rem 0 0;
-        }
 
         @media (min-width:$desktop){
            display: grid;
            grid-template-columns: 1fr 1fr;
            gap: 1rem;
+
+           p{
+                padding: 0 7rem 0 0;
+            }
         }
     }
 
