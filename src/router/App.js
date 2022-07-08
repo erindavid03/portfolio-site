@@ -12,25 +12,40 @@ import Contact from '../components/Contact';
 import SingleArtwork from '../components/pages/SingleArtworkPage';
 import SingleDev from '../components/pages/SingleDevPage';
 import MobileNav from '../components/MobileNav';
+// loads here
+import React, { useState, useEffect } from 'react'
+import LoadingScreen from '../components/LoadingScreen';
 
 
 function App() {
+
+  
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000)
+  }, [])
+
+
   return (
     <BrowserRouter>
     <Header/>
     <MobileNav/>
-      <main>
-        <Routes>
-          <Route path={'/'} element={<HomePage/>}/>
-          <Route path={'/about'} element={<AboutPage/>}/>
-          <Route path={'/artworks'} element={<ArtworkPage/>}/>
-          <Route path={'/development'} element={<DevPage/>}/>
-          <Route path='*' element={<NotFoundPage/>}/>
-          <Route path='/artworks/:id' element={<SingleArtwork/>}/>
-          <Route path='/development/:id' element={<SingleDev/>}/>
-        </Routes>
-        <Contact/>
-      </main>
+      { !loading ? 
+        <main>
+          <Routes>
+            <Route path={'/'} element={<HomePage/>}/>
+            <Route path={'/about'} element={<AboutPage/>}/>
+            <Route path={'/artworks'} element={<ArtworkPage/>}/>
+            <Route path={'/development'} element={<DevPage/>}/>
+            <Route path='*' element={<NotFoundPage/>}/>
+            <Route path='/artworks/:id' element={<SingleArtwork/>}/>
+            <Route path='/development/:id' element={<SingleDev/>}/>
+          </Routes>
+          <Contact/>
+        </main> 
+          :
+        <LoadingScreen /> }
       <Footer/>
     </BrowserRouter>
   );
