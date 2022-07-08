@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import CatLogo from './images/about.png';
+import CatLogo from './images/cat-logo.png';
 
 function Header() {
   return (
