@@ -4,6 +4,9 @@ import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import KeyFeatures from '../Dev/KeyFeatures';
+import { Gallery, Item } from 'react-photoswipe-gallery'
+import 'photoswipe/style.css';
+
 
 function SingleDevPage() {
 
@@ -25,10 +28,6 @@ function SingleDevPage() {
     };
     fetchData();
   }, [apiPath]);
-
-  if(isLoaded){
-    console.log(restData);
-  }
 
   return (
     <>
@@ -87,8 +86,20 @@ function SingleDevPage() {
                 <TabPanel>
                   <h2>In Progress</h2>
                   <p>Here are pictures during the development progress!</p>
-                  <div>
-                      {restData.acf['wip_pictures'].map( wip => <img key={wip.id} src={wip.url} alt={wip.alt}/>)}
+                  <div className='gallery'>
+                    <Gallery id='gallery--wip'>
+                        {restData.acf['wip_pictures'].map( wip => 
+                            <Item
+                                original={wip.url}
+                                thumbnail={wip.sizes.thumbnail}
+                                width={wip.width}
+                                height={wip.height}> 
+                              {({ ref, open }) => (
+                                <img ref={ref} onClick={open} src={wip.sizes.thumbnail} alt={wip.alt} />
+                              )}
+                            </Item>
+                          )}
+                    </Gallery>
                   </div>
                 </TabPanel>}
             </Tabs>
