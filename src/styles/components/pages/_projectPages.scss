@@ -60,6 +60,24 @@
         list-style: "\♡   ";
         line-height: 2;
     }
+
+    .feature-grid{
+        img{
+            max-width: 250px;
+            margin: 0 auto;
+            display: block;
+            border-radius: .5rem;
+        }
+
+        @media(min-width: $tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+           
+            margin: 3rem ;
+        }
+    }
+
 }
 
 // FOR REACT TAB STYLES I WANT TO CHANGE
