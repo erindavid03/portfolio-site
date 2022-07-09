@@ -6,7 +6,7 @@ function AboutPage() {
   <>
     <div className='about'>
       <section className='page-intro'>
-          <img src={HeroImage} alt="an image of a girl holding a cat" />
+          <img src={HeroImage} alt="a girl holding a cat" />
           <div>
             <h1>Hi there! Im Erin {':)'}</h1>
             <p>I am a Front-End Web Developer from the lower mainland with a passion for designing original creations.

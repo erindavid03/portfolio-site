@@ -15,7 +15,7 @@ function ArtworkPage() {
           <p>This is where I keep all my cool artwork! I enjoy both digital and traditional media as a means to produce neat projects.  I take inspiration from old anime, psychological horror, and Wes Anderson movies. 
           I mostly use AdobePhotoshhop and FireAlpaca when drawing digitally, while my favourite traditional tool is shading pencils and acrylic paint!</p>
         </div>
-        <img src={`${ArtBanner}`} alt="Image of Cat drawing" />
+        <img src={`${ArtBanner}`} alt="drawing kitty cat" />
       </div>
   
       <ArtworkContainer />

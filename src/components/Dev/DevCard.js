@@ -19,7 +19,7 @@ function DevCard({project}) {
   return (
       <article className={isWide ? 'card' : 'card slide'}>
         <div>
-            <img src={project.acf.finished_product}/> 
+            <img src={`${project.acf.finished_product.url}`} alt={project.acf.finished_product.alt}/> 
         </div>
         {!isWide && <Link to={`/development/${project.id}`}>{project.title.rendered}</Link>}
 

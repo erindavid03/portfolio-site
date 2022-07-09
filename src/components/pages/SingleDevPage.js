@@ -38,7 +38,7 @@ function SingleDevPage() {
      <h1>{restData.title.rendered}</h1>  
         <section className='piece-about'>
           <div className='general-info'>
-            <img src={`${restData.acf.finished_product}`} />
+            <img src={`${restData.acf.finished_product.url}`} alt={restData.acf.finished_product.alt} />
             <div>
                 <h2>General Statement</h2>
                 <p>{restData.acf.general_statement}</p>
