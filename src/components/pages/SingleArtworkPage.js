@@ -84,7 +84,7 @@ function SingleArtwork() {
 
         { restData.acf.wip_pictures && 
         <TabPanel>
-          <h2>In Progress</h2>
+          <h2>Cool Pictures</h2>
           <p>Here are pictures during the progress!</p>
           <div className='gallery'>
                     <Gallery id='gallery--wip'>
