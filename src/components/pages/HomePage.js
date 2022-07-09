@@ -1,12 +1,18 @@
 import React from 'react'
 import WorkLinks from '../WorkLinks';
 import CatSit from '../images/cat-sit.png';
+import { Helmet } from 'react-helmet';
 
 function HomePage() {
    
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Erin Dee</title>
+        <meta name="description" content="Welcome to my world! My name is Erin David, I like to code, draw, play old games and listen to music!" />
+      </Helmet>
       <section className='intro-section'>
         <div>
           <h1>Hi there!</h1>

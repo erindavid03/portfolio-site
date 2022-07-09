@@ -6,6 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import Loading from '../../components/Loading';
 import 'react-tabs/style/react-tabs.css';
+import { Helmet } from 'react-helmet';
 
 
 function SingleArtwork() {
@@ -34,6 +35,10 @@ function SingleArtwork() {
     <>
     { isLoaded ? 
     <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Erin Dee | {restData.title.rendered}</title>
+    </Helmet>
     <Link to='/artwork' className='back-to-menu'>Back to Artwork</Link>
     <section className='piece-about'>
       <h1>{restData.title.rendered}</h1>

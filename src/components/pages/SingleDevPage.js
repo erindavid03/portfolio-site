@@ -7,6 +7,7 @@ import KeyFeatures from '../Dev/KeyFeatures';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import Loading from '../../components/Loading';
 import 'photoswipe/style.css';
+import { Helmet } from 'react-helmet';
 
 
 function SingleDevPage() {
@@ -34,11 +35,15 @@ function SingleDevPage() {
     <>
    { isLoaded ? 
    <>
+   <Helmet>
+      <meta charSet="utf-8" />
+      <title>Erin Dee | {restData.title.rendered}</title>
+    </Helmet>
      <Link to='/development' className='back-to-menu'>Back to Development</Link>
      <h1>{restData.title.rendered}</h1>  
         <section className='piece-about'>
           <div className='general-info'>
-            <img src={`${restData.acf.finished_product}`} />
+            <img src={`${restData.acf.finished_product.url}`} alt={restData.acf.finished_product.alt} />
             <div>
                 <h2>General Statement</h2>
                 <p>{restData.acf.general_statement}</p>

@@ -16,7 +16,7 @@ function Contact() {
   return (
     <section id="contact">
         <h2>{contactGreeting[randomGreetingIndex]}</h2>
-        <a href="mailto:erindavid001@email.com">{ randomGreetingIndex == 8 ? buttonText[1] : buttonText[0] }</a>
+        <a href="mailto:erindavid001@email.com">{ randomGreetingIndex === 8 ? buttonText[1] : buttonText[0] }</a>
     </section>
   )
 }
