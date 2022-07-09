@@ -21,7 +21,7 @@ function ArtworkCard({artwork}) {
   return (
     <article className={isWide ? 'card' : 'card slide'}>
         <div>
-            <img src={artwork.acf.artwork_image}/> 
+            <img src={artwork.acf.artwork_image.url}/> 
         </div>
         {!isWide && <Link to={`/artworks/${artwork.id}`}>{artwork.title.rendered}</Link>}
 
