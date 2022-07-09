@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Gallery, Item } from 'react-photoswipe-gallery';
 import Loading from '../../components/Loading';
 import 'react-tabs/style/react-tabs.css';
 
@@ -37,7 +38,17 @@ function SingleArtwork() {
     <section className='piece-about'>
       <h1>{restData.title.rendered}</h1>
       <div className='general-info'>
-        <img src={`${restData.acf.artwork_image}`} />
+        <Gallery id='finished-prod'>
+          <Item
+              original={restData.acf.artwork_image.url}
+              thumbnail={restData.acf.artwork_image.sizes.medium}
+              width={restData.acf.artwork_image.width}
+              height={restData.acf.artwork_image.height}> 
+            {({ ref, open }) => (
+              <img ref={ref} onClick={open} src={restData.acf.artwork_image.sizes.medium} alt={restData.acf.artwork_image.alt} />
+            )}
+          </Item>
+        </Gallery>
         <div>
           <h2>General info</h2>
           <p>{restData.acf.general_statement}</p>
@@ -75,9 +86,22 @@ function SingleArtwork() {
         <TabPanel>
           <h2>In Progress</h2>
           <p>Here are pictures during the progress!</p>
-          <div>
-
-          </div>
+          <div className='gallery'>
+                    <Gallery id='gallery--wip'>
+                        {restData.acf['wip_pictures'].map( wip => 
+                            <Item
+                                key={wip.id}
+                                original={wip.url}
+                                thumbnail={wip.sizes.thumbnail}
+                                width={wip.width}
+                                height={wip.height}> 
+                              {({ ref, open }) => (
+                                <img ref={ref} onClick={open} src={wip.sizes.thumbnail} alt={wip.alt} />
+                              )}
+                            </Item>
+                          )}
+                    </Gallery>
+                  </div>
         </TabPanel>}
       </Tabs>
     </section> 
