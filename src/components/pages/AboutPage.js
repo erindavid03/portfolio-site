@@ -1,9 +1,15 @@
 import React from 'react';
 import HeroImage from '../images/me-picture.png';
+import { Helmet } from 'react-helmet';
 
 function AboutPage() {
   return (
   <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Erin Dee | About</title>
+      <meta name="description" content="This is a little bit about me, Erin Dee!" />
+    </Helmet>
     <div className='about'>
       <section className='page-intro'>
           <img src={HeroImage} alt="a girl holding a cat" />
