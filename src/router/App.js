@@ -31,10 +31,9 @@ function App() {
     <BrowserRouter>
     { !loading ? 
       <>
-        <a href="#main-content" class="screen-reader-text">Skip to content</a>
         <Header/>
         <MobileNav/>
-          <main id='main-content'>
+          <main>
             <Routes>
               <Route path={'/'} element={<HomePage/>}/>
               <Route path={'/about'} element={<AboutPage/>}/>
