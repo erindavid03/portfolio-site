@@ -23,30 +23,33 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6000)
+    setTimeout(() => setLoading(false), 1000)
   }, [])
 
 
   return (
     <BrowserRouter>
-    <Header/>
-    <MobileNav/>
-      { !loading ? 
-        <main>
-          <Routes>
-            <Route path={'/'} element={<HomePage/>}/>
-            <Route path={'/about'} element={<AboutPage/>}/>
-            <Route path={'/artworks'} element={<ArtworkPage/>}/>
-            <Route path={'/development'} element={<DevPage/>}/>
-            <Route path='*' element={<NotFoundPage/>}/>
-            <Route path='/artworks/:id' element={<SingleArtwork/>}/>
-            <Route path='/development/:id' element={<SingleDev/>}/>
-          </Routes>
-          <Contact/>
-        </main> 
-          :
-        <LoadingScreen /> }
-      <Footer/>
+    { !loading ? 
+      <>
+        <Header/>
+        <MobileNav/>
+          <main>
+            <Routes>
+              <Route path={'/'} element={<HomePage/>}/>
+              <Route path={'/about'} element={<AboutPage/>}/>
+              <Route path={'/artworks'} element={<ArtworkPage/>}/>
+              <Route path={'/development'} element={<DevPage/>}/>
+              <Route path='*' element={<NotFoundPage/>}/>
+              <Route path='/artworks/:id' element={<SingleArtwork/>}/>
+              <Route path='/development/:id' element={<SingleDev/>}/>
+            </Routes>
+            <Contact/>
+          </main>
+          <Footer/>
+      </>
+      : 
+        <LoadingScreen />
+      }
     </BrowserRouter>
   );
 }

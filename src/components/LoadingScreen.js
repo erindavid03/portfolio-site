@@ -3,7 +3,7 @@ import Loading from './Loading';
 
 function LoadingScreen() {
   return (
-    <main>
+    <main className='loading-screen'>
         <Loading />
     </main>
   )

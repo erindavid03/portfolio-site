@@ -104,3 +104,13 @@ body{
     max-width: 258px;
     margin: 0 auto;
 }
+
+.loading-screen{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
